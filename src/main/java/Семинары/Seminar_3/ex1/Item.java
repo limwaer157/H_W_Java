@@ -1,16 +1,18 @@
 package Семинары.Seminar_3.ex1;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+
 public class Item {
-    public String name;
-    public String country;
-    public  Integer volume;
 
-    public Item(String name, String country, Integer volume) {
-        this.name = name;
-        this.country = country;
-        this.volume = volume;
-    }
+    private String name;
+    private String country;
+    private Integer volume;
 
-    public Item() {
-    }
 }
