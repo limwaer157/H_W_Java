@@ -1,9 +1,7 @@
 package org.example.Home_work.Seminar_3.Task_1;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-
 //1. Дан массив записей: наименование товара, цена, сорт.
 // Найти наибольшую цену товаров 1-го или 2-го сорта среди товаров, название которых содержит «высший».
 public class Main {
@@ -25,7 +23,7 @@ public class Main {
         List<Tovar> sortTovara = new ArrayList<>();
         for (Tovar tovari : tovar) {
             if ( tovari.getSort() == 1 || tovari.getSort() == 2)
-                if(!tovari.getGoods().equals("высший"))
+                if(tovari.getGoods().contains(" высший "))
                     sortTovara.add(tovari);
         }
         System.out.println("sortTovara = " + sortTovara);
