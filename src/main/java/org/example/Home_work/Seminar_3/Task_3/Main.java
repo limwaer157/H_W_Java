@@ -1,2 +1,9 @@
-package org.example.Home_work.Seminar_3.Task_3;public class Main {
+package org.example.Home_work.Seminar_3.Task_3;
+// Сведения о книге состоят из названия, фамилии автора, цены, года издания и количества страниц.
+// Найти названия книг, в которых простое количество страниц,
+// фамилия автора содержит «А» и год издания после 2010 г, включительно.
+public class Main {
+    public static void main(String[] args) {
+
+    }
 }
