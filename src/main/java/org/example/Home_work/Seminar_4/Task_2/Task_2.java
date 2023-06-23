@@ -10,7 +10,7 @@ import java.util.*;
 public class Task_2 {
     public static void main(String[] args) {
         Deque<Character> deque = new ArrayDeque<>();
-        String s = "(){}";
+        String s = "(){}[";
         char[] x = s.toCharArray();
         boolean flag = isValid(deque, x);
         System.out.println(flag);
