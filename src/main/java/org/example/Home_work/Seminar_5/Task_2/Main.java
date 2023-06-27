@@ -3,7 +3,7 @@ package org.example.Home_work.Seminar_5.Task_2;
 import com.google.common.collect.Collections2;
 
 import java.util.*;
-//Написать программу, которая найдёт и выведет повторяющиеся
+//Написать программа, которая найдёт и выведет повторяющиеся
 // имена с количеством повторений. Отсортировать по убыванию популярности.
 public class Main {
     public static void main(String[] args) {
