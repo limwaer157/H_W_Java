@@ -8,11 +8,12 @@ public class Main {
         List<Category> categoriiTovarov = fullCategory();
         List<Tovar> allTovar = fullArray();
         List<Tovar> buyTovar = new ArrayList<>();
-        menu(scanner, allTovar, buyTovar);
+        Basket basket = new Basket();
+        menu(scanner, allTovar, buyTovar,basket);
+        User user1 = new User(basket.getBuyTovar(),"qwerty","qwer@gmail.com");
+        User user2 = new User(basket.getBuyTovar(),"ytrewq","rewq@gmail.com");
 
-//        User user1 = new User("buyTovar","qwerty","qwer@gmail.com");
     }
-
     /**
      * метод наполняющий колекцию с категориями продуктов
      *
@@ -35,7 +36,7 @@ public class Main {
      * @param scanner  дя считывания выбора из списка
      * @param allTovar все товары
      */
-    private static void menu(Scanner scanner, List<Tovar> allTovar, List<Tovar> buyTovar) {
+    private static void menu(Scanner scanner, List<Tovar> allTovar, List<Tovar> buyTovar,Basket basket) {
         String text = "Что хотите сделать \n" +
                 "1 Вывести список всех продуктов \n" +
                 "2 Вывести список покупок \n" +
@@ -55,7 +56,7 @@ public class Main {
                 a = scanner.nextInt();
             }
             if (a == 3) {
-                buyTovar = pokypki(allTovar, scanner);
+                buyTovar = pokypki(allTovar, scanner,basket);
                 System.out.print(text);
                 a = scanner.nextInt();
             }
@@ -68,8 +69,9 @@ public class Main {
      * @param scanner для ыбора польователем
      * @return возврат списка покупок
      */
-    private static List<Tovar> pokypki(List<Tovar> allTovar, Scanner scanner) {
+    private static List<Tovar> pokypki(List<Tovar> allTovar, Scanner scanner,Basket basket) {
         List<Tovar> buyTovar = new ArrayList<>();
+        String[] strBasket = new String[allTovar.size()];
         for (int i = 0; i < allTovar.size(); i++) {
             System.out.print("Товар " + (i + 1) + " Наименование " +
                     allTovar.get(i).getNameTavara() +
@@ -78,34 +80,15 @@ public class Main {
             System.out.print("Нажмите 1 если хотите добваить в свой список покупок ?");
             if (scanner.nextInt() == 1) {
                 buyTovar.add(allTovar.get(i));
+                strBasket[i] = allTovar.get(i).getNameTavara();
                 allTovar.remove(i);
                 i = i - 1;
             }
         }
+        basket.setBuyTovar(strBasket);
+        System.out.println("basket = " + Arrays.toString(basket.getBuyTovar()));
         return buyTovar;
     }
-
-    //
-    //
-
-//    private static Basket buyer(List<Tovar> allTovar, Scanner scanner) {
-//        Basket basket = new Basket();
-//
-//        for (int i = 0; i < allTovar.size(); i++) {
-//            System.out.print("Товар " + (i + 1) + " Наименование " +
-//                    allTovar.get(i).getNameTavara() +
-//                    " цена " + allTovar.get(i).getPrice() +
-//                    " рейтинг " + allTovar.get(i).getRating() + "\n");
-//            System.out.print("Нажмите 1 если хотите добваить в свой список покупок ?");
-//            if (scanner.nextInt() == 1) {
-//                basket.setBuyTovar(allTovar.get(i));
-//                allTovar.remove(i);
-//                i = i - 1;
-//            }
-//        }
-//        return buyTovar;
-//    }
-
     /**
      * Метод выводящий все товары
      *
@@ -134,7 +117,6 @@ public class Main {
         allTovar.add(tovar3);
         return allTovar;
     }
-
     /**
      * метод для вывода покупок
      * @param buyTovar коллекция с товарами

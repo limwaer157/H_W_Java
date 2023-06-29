@@ -1,5 +1,5 @@
 package org.example.Home_work_OOP.Seminar_1;
-//Cодержащий логин пароль и объекты класса basket. Создать несколько объектов класса user
+
 public class User extends Basket {
     private String loginUser;
     private String password;

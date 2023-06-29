@@ -1,9 +1,5 @@
 package org.example.Home_work_OOP.Seminar_1;
 
-import java.util.ArrayList;
-import java.util.List;
-
-//Содержит массив купленных товаров
 public class Basket {
     private String[] buyTovar;
 
