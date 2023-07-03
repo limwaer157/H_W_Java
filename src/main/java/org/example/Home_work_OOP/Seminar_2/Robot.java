@@ -33,15 +33,12 @@ public class Robot implements CanDo {
             return 0;
         }
     }
-
     public int getMaxDistanceJump() {
         return maxDistanceJump;
     }
-
     public void setMaxDistanceJump(int maxDistanceJump) {
         this.maxDistanceJump = maxDistanceJump;
     }
-
     public int getMaxDistanceRun() {
         return maxDistanceRun;
     }
