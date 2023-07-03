@@ -10,7 +10,7 @@ public class Main {
         Prepadstvie[] prepadstvies = fullPrepat();
 
 /**
- * метод для определения кто сможет пройти дальше или нет
+ * метод  для определения кто сможет пройти дальше или нет.
  */
         for (int i = 0; i < prepadstvies.length; i++) {
             for (int j = 0; j < canDo.length; j++) {
