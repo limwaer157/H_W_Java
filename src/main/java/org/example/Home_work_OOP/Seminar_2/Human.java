@@ -22,7 +22,6 @@ public class Human implements CanDo{
         else System.out.println("Человек  прошел испытание run  ");
         return 0;
     }
-
     @Override
     public int jump(int distance ) {
         if (distance>=maxDistanceJump) {System.out.println("Человек не прошел испытание jump и выбывает   ");
@@ -34,11 +33,9 @@ public class Human implements CanDo{
     public int getMaxDistanceJump() {
         return maxDistanceJump;
     }
-
     public void setMaxDistanceJump(int maxDistanceJump) {
         this.maxDistanceJump = maxDistanceJump;
     }
-
     public int getMaxDistanceRun() {
         return maxDistanceRun;
     }
