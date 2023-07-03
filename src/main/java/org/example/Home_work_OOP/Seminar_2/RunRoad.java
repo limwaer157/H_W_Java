@@ -12,15 +12,13 @@ public class RunRoad implements Prepadstvie {
         this.dlinna = dlinna;
     }
 
-    public RunRoad() {
+    public  RunRoad() {
     }
-
     @Override
     public int razmerPrep() {
         System.out.print("Препятствие дорога  - " + dlinna + " км ");
         return dlinna ;
     }
-
     public RunRoad(int dlinna, String namePrep) {
         this.dlinna = dlinna;
         this.namePrep = "RunRoad";
@@ -28,9 +26,9 @@ public class RunRoad implements Prepadstvie {
 
     @Override
     public String namePrep() {
+
         return namePrep;
     }
-
     public int getVisota() {
         return dlinna;
     }
