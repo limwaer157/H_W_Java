@@ -3,15 +3,12 @@ package org.example.Home_work_OOP.Seminar_2;
 public class Cat implements CanDo {
     private int maxDistanceJump;
     private int maxDistanceRun;
-
     public Cat(int maxDistanceJump, int maxDistanceRun) {
         this.maxDistanceJump = maxDistanceJump;
         this.maxDistanceRun = maxDistanceRun;
     }
-
     public Cat() {
     }
-
     @Override
     public int run(int distance) {
         if (distance >= maxDistanceRun) {
