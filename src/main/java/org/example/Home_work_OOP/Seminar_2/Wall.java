@@ -8,11 +8,8 @@ public class Wall implements Prepadstvie {
         this.visota = visota;
         this.namePrep = "Wall";
     }
-
     public Wall() {
     }
-
-
     @Override
     public int razmerPrep() {
         System.out.print("Препятствие стена  - " + visota + " метров ");
