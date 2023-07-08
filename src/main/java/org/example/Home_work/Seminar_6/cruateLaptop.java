@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class cruateLaptop {
     /**
      * Создаем множества компьютеров.
-     *
      * @return Возвращаем коллекцию компьютеров с характеристиками.
      */
     protected static List<laptop> generateLaptop() {

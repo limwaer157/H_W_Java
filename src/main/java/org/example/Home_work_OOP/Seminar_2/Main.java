@@ -15,17 +15,16 @@ public class Main {
         for (int i = 0; i < prepadstvies.length; i++) {
             for (int j = 0; j < canDo.length; j++) {
                 int a = -1;
-                if(canDo[j]!= null){
-                if (prepadstvies[i].namePrep().equals("Wall")) {
-                    a = canDo[j].jump(prepadstvies[i].razmerPrep());
+                if (canDo[j] != null) {
+                    if (prepadstvies[i].namePrep().equals("Wall")) {
+                        a = canDo[j].jump(prepadstvies[i].razmerPrep());
 
-                } else if (prepadstvies[i].namePrep().equals("RunRoad")) {
-                    a = canDo[j].run(prepadstvies[i].razmerPrep());
-                    if (a == 1) {
-                        canDo[j] = null;
-                    }
-                }
-                else continue;
+                    } else if (prepadstvies[i].namePrep().equals("RunRoad")) {
+                        a = canDo[j].run(prepadstvies[i].razmerPrep());
+                        if (a == 1) {
+                            canDo[j] = null;
+                        }
+                    } else continue;
                 }
                 if (a == 1) {
                     canDo[j] = null;
@@ -35,17 +34,20 @@ public class Main {
     }
     /**
      * Метод для наполнения участниками
+     *
      * @return возвращает массив участников
      */
     private static CanDo[] fullPersons() {
-        CanDo[] canDo = {new Human(5, 10),
-                new Cat(10, 20),
-                new Robot(20, 50),};
+        CanDo[] canDo =
+                        {new Human(5, 10),
+                        new Cat(10, 20),
+                        new Robot(50, 50),};
         return canDo;
     }
 
     /**
      * Метод для наполнения препятствиями
+     *
      * @return возващает массив препядствий
      */
     private static Prepadstvie[] fullPrepat() {

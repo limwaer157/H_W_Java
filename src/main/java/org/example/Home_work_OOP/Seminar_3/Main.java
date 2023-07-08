@@ -1,19 +1,54 @@
 package org.example.Home_work_OOP.Seminar_3;
 
-// Press ⇧ twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+// TODO: Дописать игру быки-коровы
+//- на русском и английском алфавите
+//- сделать логирование действий и по запросу пользователя посмотреть всю историю игры
+//- реализовать перезапуск игры
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Press ⌥⏎ with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("For ENG 1 For RUS 2 For NUM 3");
+        int a = scanner.nextInt();
 
-        // Press ⌃R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press ⌃D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing ⌘F8.
-            System.out.println("i = " + i);
+        if (a == 1) {
+            EnglishWord englishWord = new EnglishWord();
+            System.out.print("Enter size of word and how many tries - ");
+            englishWord.start(scanner.nextInt(), scanner.nextInt());
+            scanner.nextLine();
+            while (!englishWord.maxTry.equals(GameStatus.FINISH)) {
+                String value = scanner.nextLine();
+                Answer answer = englishWord.inpuValue(value);
+                if (answer != null) {
+                    System.out.println("answer = " + answer);
+                }
+            }
+        } else if (a == 2) {
+            RusWord rusWord = new RusWord();
+            System.out.println("Enter size of word and how many tries - ");
+            rusWord.start(scanner.nextInt(), scanner.nextInt());
+            scanner.nextLine();
+            while (!rusWord.maxTry.equals(GameStatus.FINISH)) {
+                String value = scanner.nextLine();
+                Answer answer = rusWord.inpuValue(value);
+                if (answer != null) {
+                    System.out.println("answer = " + answer);
+                }
+            }
+        } else if (a == 3) {
+            NumberGame numberGame = new NumberGame();
+            System.out.println("Enter size of word and how many tries - ");
+            numberGame.start(scanner.nextInt(), scanner.nextInt());
+            scanner.nextLine();
+            while (!numberGame.maxTry.equals(GameStatus.FINISH)) {
+                String value = scanner.nextLine();
+                Answer answer = numberGame.inpuValue(value);
+                if (answer != null) {
+                    System.out.println("answer = " + answer);
+                }
+            }
         }
     }
 }
