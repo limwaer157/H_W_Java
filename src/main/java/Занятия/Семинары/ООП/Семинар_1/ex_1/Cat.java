@@ -1,4 +1,4 @@
-package org.example.Семинары.ООП.Семинар_1.ex_1;
+package Занятия.Семинары.ООП.Семинар_1.ex_1;
 
 public class Cat extends Animal {
   private   String color;

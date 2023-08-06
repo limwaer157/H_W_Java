@@ -1,4 +1,4 @@
-package org.example.Семинары.ООП.Семинар_2.ex1;
+package Занятия.Семинары.ООП.Семинар_2.ex1;
 
 public class Tiger extends Cat{
     protected static int count;

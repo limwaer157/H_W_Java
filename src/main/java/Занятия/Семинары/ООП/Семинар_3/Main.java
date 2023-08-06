@@ -1,4 +1,4 @@
-package org.example.Семинары.ООП.Семинар_3;
+package Занятия.Семинары.ООП.Семинар_3;
 //2)Создать коробку с числами(BoxWithNumber) и найти среднее значение(average) и сравнение средних(compareAverage).
 public class Main {
     public static void main(String[] args) {

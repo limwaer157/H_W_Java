@@ -1,4 +1,4 @@
-package org.example.Семинары.ООП.Семинар_1.ex_1;
+package Занятия.Семинары.ООП.Семинар_1.ex_1;
 
 public class Main {
     public static void main(String[] args) {

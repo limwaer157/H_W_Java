@@ -1,4 +1,4 @@
-package org.example.Семинары.Java.Seminar_3.ex3;
+package Занятия.Семинары.Java.Seminar_3.ex3;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

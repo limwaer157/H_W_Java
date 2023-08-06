@@ -1,4 +1,4 @@
-package org.example.Семинары.Java.Seminar_3.ex2;
+package Занятия.Семинары.Java.Seminar_3.ex2;
 
 import java.util.ArrayList;
 import java.util.List;

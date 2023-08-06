@@ -1,4 +1,4 @@
-package org.example.Семинары.ООП.Семинар_3;
+package Занятия.Семинары.ООП.Семинар_3;
 
 import lombok.Data;
 

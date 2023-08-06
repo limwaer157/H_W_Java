@@ -1,4 +1,4 @@
-package org.example.Семинары.ООП.Семинар_1.ex_2;
+package Занятия.Семинары.ООП.Семинар_1.ex_2;
 public class Accunt {
     private Integer numAccaunt;
     private String  owner;

@@ -1,4 +1,4 @@
-package org.example.Семинары.Java.Seminar_5;
+package Занятия.Семинары.Java.Seminar_5;
 
 import java.util.HashMap;
 import java.util.Map;

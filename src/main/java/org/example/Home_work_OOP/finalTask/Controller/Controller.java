@@ -33,6 +33,7 @@ public class Controller {
         if (a == 3 ){
             String result = (operations.division());
             System.out.print(result);
-            log.printTofile(result);        }
+            log.printTofile(result);
+        }
     }
 }
